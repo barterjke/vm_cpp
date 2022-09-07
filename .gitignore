@@ -1,3 +1,8 @@
+vcs.xml
+*.iml
+*.bin
+*.xml
+
 # Prerequisites
 *.d
 
