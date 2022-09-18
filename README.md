@@ -20,3 +20,27 @@ Instruction set:
 - `SYS_CALL` - sys_call for Linux. NOT IMPLEMENTED
 
 You can find examples usage in examples/fibonacci.casm file. 
+
+Fibonacci exampel:
+```
+0       // count
+11      // terms
+0       // n1
+1       // n2
+
+1 BRANCH before_loop
+
+loop:
+    [2] LOAD
+    [3] LOAD
+    SUM                             // n1 + n2
+    (3 LOAD) [2] STORE              // n1 = n2
+    [3] STORE                       // n2 = nth
+    ([0] LOAD 1 SUM) [0] STORE      // count += 1
+
+before_loop:
+    0 LOAD 1 LOAD
+    LESS // count < terms
+    BRANCH loop
+DEBUG
+```
