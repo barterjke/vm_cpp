@@ -1,4 +1,4 @@
-# vm_cpp
+# Virtual Machine 
 Simple stack based virtual machine written in C++
 
 Instruction set:
